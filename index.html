@@ -5,8 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Онлайн-курс по программированию</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        .hero-body {
+            padding: 4rem 1.5rem;
+        }
+        .box {
+            border-radius: 10px;
+        }
+        .footer {
+            padding: 2rem 0;
+            background-color: #f5f5f5;
+        }
+    </style>
 </head>
 <body>
+    <nav class="navbar is-fixed-top is-primary">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <strong>Онлайн-курс</strong>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#course">О курсе</a>
+                <a class="navbar-item" href="#advantages">Преимущества</a>
+                <a class="navbar-item" href="#reviews">Отзывы</a>
+            </div>
+        </div>
+    </nav>
+
     <section class="hero is-primary">
         <div class="hero-body">
             <div class="container">
@@ -16,19 +43,20 @@
                 <h2 class="subtitle">
                     Освойте программирование с нуля и создайте свой проект
                 </h2>
-                <a href="#signup" class="button is-link">Записаться на курс</a>
+                <a href="#signup" class="button is-link is-large">Записаться на курс</a>
             </div>
         </div>
     </section>
-    <section class="section">
+
+    <section class="section" id="course">
         <div class="container">
             <h3 class="title">О курсе</h3>
-            <p>Описание курса: Практика, поддержка опытных наставников и гибкий график занятий.</p>
+            <p>Описание курса: Освой основы программирования и развивай свои навыки с нашим курсом, охватывающим ключевые темы от алгоритмов до искусственного интеллекта. Мы предлагаем практические задания, проекты для портфолио и поддержку преподавателей. Учись в своем темпе и получи все необходимые знания для старта карьеры в IT!</p>
             <a href="#more" class="button is-outlined">Подробнее</a>
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="advantages">
         <div class="container">
             <h3 class="title">Преимущества</h3>
             <div class="columns">
@@ -47,14 +75,15 @@
                 <div class="column">
                     <div class="box">
                         <h4 class="subtitle">Поддержка</h4>
-                        <p>Опытые наставники всегда на связи</p>
+                        <p>Опытные наставники всегда на связи</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
+
+    <section class="section" id="reviews">
         <div class="container">
             <h3 class="title">Отзывы студентов</h3>
             <div class="columns">
@@ -72,6 +101,7 @@
         </div>
     </section>
 
+    <!-- Футер -->
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
