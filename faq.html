@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Онлайн-курс по программированию</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="navbar is-fixed-top is-primary">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+            <strong>Онлайн-курс</strong>
+        </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="index.html">Главная</a>
+            <a class="navbar-item" href="contacts.html">Контакты</a>
+            <a class="navbar-item" href="faq.html">FAQ</a>
+        </div>
+    </div>
+</nav>
+
+<section class="section">
+    <div class="container">
+        <h2 class="title is-2">Часто задаваемые вопросы</h2>
+
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        Как начать пользоваться сервисом?
+                    </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Зарегистрируйтесь на сайте и вам будет доступен бесплатным вводный курс. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        Есть ли мобильное приложение?
+                    </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Да, для вашего удобства мы создали приложение. Оно доступно в App Store и Google Play. Все функции синхронизируются между веб-версией и приложением.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Онлайн-курс по программированию</strong> by <a href="#">kylapru</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

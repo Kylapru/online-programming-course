@@ -8,53 +8,79 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    
-    <nav class="navbar is-fixed-top is-primary">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <strong>Онлайн-курс</strong>
-            </a>
+
+<nav class="navbar is-fixed-top is-primary">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+            <strong>Онлайн-курс</strong>
+        </a>
+    </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="index.html">Главная</a>
+            <a class="navbar-item" href="contacts.html">Контакты</a>
+            <a class="navbar-item" href="faq.html">FAQ</a>
         </div>
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="course.html">О курсе</a>
-                <a class="navbar-item" href="reviews.html">Отзывы</a>
-                <a class="navbar-item" href="signup.html">Регистрация</a>
+    </div>
+</nav>
+
+<section class="section" id="signup">
+    <div class="container">
+        <h3 class="title">Регистрация на курс</h3>
+        
+        <form id="signupForm">
+            <div class="field">
+                <label class="label">Ваше имя</label>
+                <div class="control">
+                    <input class="input" type="text" id="name" placeholder="Введите ваше имя" required>
+                </div>
             </div>
-        </div>
-    </nav>
+            
+            <div class="field">
+                <label class="label">Электронная почта</label>
+                <div class="control">
+                    <input class="input" type="email" id="email" placeholder="Введите вашу почту" required>
+                </div>
+            </div>
+            
+            <div class="field">
+                <div class="control">
+                    <button type="submit" class="button is-link">Зарегистрироваться</button>
+                </div>
+            </div>
+        </form>
 
-    <section class="section" id="signup">
-        <div class="container">
-            <h3 class="title">Регистрация на курс</h3>
-            <form action="submit_form.php" method="POST">
-                <div class="field">
-                    <label class="label">Ваше имя</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="Введите ваше имя" name="name" required>
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label">Электронная почта</label>
-                    <div class="control">
-                        <input class="input" type="email" placeholder="Введите вашу почту" name="email" required>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="control">
-                        <button type="submit" class="button is-link">Зарегистрироваться</button>
-                    </div>
-                </div>
-            </form>
+        <div id="message" class="notification is-success" style="display: none;">
+            <p>Ссылка для входа была отправлена на ваш email!</p>
+            <button class="delete" onclick="closeMessage()"></button> 
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                <strong>Онлайн-курс по программированию</strong> by <a href="#">kylapru</a>
-            </p>
-        </div>
-    </footer>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Онлайн-курс по программированию</strong> by <a href="#">kylapru</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+    function closeMessage() {
+        document.getElementById('message').style.display = 'none';
+    }
+
+    const form = document.getElementById('signupForm');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); 
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        message.style.display = 'block';
+        form.reset();
+    });
+</script>
+
 </body>
 </html>
