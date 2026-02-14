@@ -1,3 +1,4 @@
+
 .select {
     width: 100%;
     margin-bottom: 10px;
@@ -43,4 +44,18 @@
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
+}
+
+footer .content {
+    text-align: center; 
+}
+
+
+.hero-body {
+    text-align: center; 
+}
+
+
+.has-text-centered {
+    text-align: center; 
 }
