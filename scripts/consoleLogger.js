@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const data = event.detail;
 
         console.clear();
-        console.group('--- РЕЗУЛЬТАТ ПРАКТИКИ №10 ---');
         console.log('Пользователь:', data.fullname);
         console.log('Почта:', data.email);
         console.log('Тема:', data.topic);

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const words = fullnameValue.split(' ').filter(word => word.length > 0);
 
         if (words.length < 2) {
-            showError(fullname, 'Введите фамилию и имя (минимум 2 слова)');
+            showError(fullname, 'Введите фамилию и имя очества');
             isValid = false;
         }
         
