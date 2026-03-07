@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('formValid', function(event) {
-        const formData = event.detail; 
-        console.clear(); 
-        console.log('--- Получены новые данные формы ---');
-        console.log('ФИО:', formData.fullname); 
-        console.log('Email:', formData.email); 
-        console.log('Тема:', formData.topic);
-        console.log('Сообщение:', formData.message); 
-        console.log('Время отправки:', new Date().toLocaleString()); 
+        const data = event.detail;
+
+        console.clear();
+        console.group('--- РЕЗУЛЬТАТ ПРАКТИКИ №10 ---');
+        console.log('Пользователь:', data.fullname);
+        console.log('Почта:', data.email);
+        console.log('Тема:', data.topic);
+        console.log('Сообщение:', data.message);
+        console.log('Статус: Проверка пройдена');
+        console.log('Время:', new Date().toLocaleString());
+        console.groupEnd();
     });
 });
