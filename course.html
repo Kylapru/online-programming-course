@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - Главная страница </title>
+    <title>Контакты - Онлайн-курс</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -15,13 +16,7 @@
             <strong>Онлайн-курс</strong>
         </a>
     </div>
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-
-            <a class="navbar-item" href="faq.html">Ответы на ваши вопросы</a>
-            <a class="navbar-item" href="reviews.html">Отзывы</a>
-        </div>
-    </div>
+    
 </nav>
 
 <section class="section">
@@ -33,14 +28,14 @@
                     <div class="field">
                         <label class="label">Имя</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Ваше имя" required>
+                            <input class="input" type="text" id="name" placeholder="Ваше имя" required>
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Email</label>
                         <div class="control">
-                            <input class="input" type="email" placeholder="example@email.com" required>
+                            <input class="input" type="email" id="email" placeholder="example@email.com" required>
                         </div>
                     </div>
 
@@ -48,7 +43,7 @@
                         <label class="label">Тема</label>
                         <div class="control">
                             <div class="select is-fullwidth">
-                                <select required>
+                                <select id="topic" required>
                                     <option value="" disabled selected>Выберите тему</option>
                                     <option>Предложение</option>
                                     <option>Жалоба</option>
@@ -62,14 +57,14 @@
                     <div class="field">
                         <label class="label">Сообщение</label>
                         <div class="control">
-                            <textarea class="textarea" placeholder="Ваше сообщение..." rows="5" required></textarea>
+                            <textarea class="textarea" id="message" placeholder="Ваше сообщение..." rows="5" required></textarea>
                         </div>
                     </div>
 
                     <div class="field">
                         <div class="control">
                             <label class="checkbox">
-                                <input type="checkbox" required>
+                                <input type="checkbox" id="agreement" required>
                                 Соглашаюсь на обработку персональных данных
                             </label>
                         </div>
@@ -97,14 +92,12 @@
 
 <footer class="footer">
     <div class="content has-text-centered">
-        <p>
-            <strong>Онлайн-курс по программированию</strong> by <a href="#">kylapru</a>
-        </p>
-        <a href="index.html">
-            <img src="assets/images/111.png" alt="Логотип" style="max-height: 40px;">
-        </a>
+        <p><strong>Онлайн-курс по программированию</strong> by <a href="#">kylapru</a></p>
     </div>
 </footer>
+
+<script src="scripts/validation.js"></script>
+<script src="scripts/consoleLogger.js"></script>
 
 </body>
 </html>
