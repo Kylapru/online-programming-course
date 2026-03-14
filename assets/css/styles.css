@@ -60,6 +60,19 @@ footer .content {
     text-align: center; 
 }
 
+.red-text {
+    color: red !important;
+}
+
+.bg-green {
+    background-color: lightgreen !important;
+}
+
+.border-container {
+    border: 2px solid #333;
+    padding: 20px;
+    margin-top: 20px;
+}
 .highlight {
-    background-color: yellow;
+    background-color: yellow !important;
 }
