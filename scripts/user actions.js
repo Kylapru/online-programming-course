@@ -1,42 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const clickBtn = document.getElementById('clickBtn');
-    const doubleClickBtn = document.getElementById('doubleClickBtn');
-    const msg = document.getElementById('clickMessage');
+    
+    const counterBtn = document.getElementById('counterBtn');
+    const counterDisplay = document.getElementById('counterDisplay');
+    let count = 0;
 
-    clickBtn.addEventListener('click', () => {
-        msg.textContent = "Кнопка нажата один раз!";
-        msg.style.color = "blue";
+    counterBtn.addEventListener('click', () => {
+        count++;
+        counterDisplay.textContent = count;
     });
 
-    doubleClickBtn.addEventListener('dblclick', () => {
-        msg.textContent = "Ого! Двойной клик!";
-        msg.style.color = "orange";
+    const greetBtn = document.getElementById('greetBtn');
+    const nameInput = document.getElementById('nameInput');
+    const greetMessage = document.getElementById('greetMessage');
+
+    greetBtn.addEventListener('click', () => {
+        const name = nameInput.value;
+        const result = `Привет, ${name}!`;
+        console.log(result); 
+        greetMessage.textContent = result; 
     });
 
-    const hoverBox = document.getElementById('hoverBox');
-
-    hoverBox.addEventListener('mouseenter', () => {
-        hoverBox.classList.replace('is-info', 'is-danger');
-        hoverBox.textContent = "Уйди с меня!";
+    const themeBtn = document.getElementById('themeBtn');
+    themeBtn.addEventListener('click', () => {
+        if (document.body.style.backgroundColor === 'rgb(51, 51, 51)') {
+            document.body.style.backgroundColor = '';
+            document.body.style.color = '';
+        } else {
+            document.body.style.backgroundColor = '#333'; 
+            document.body.style.color = '#fff'; 
+        }
     });
 
-    hoverBox.addEventListener('mouseleave', () => {
-        hoverBox.classList.replace('is-danger', 'is-info');
-        hoverBox.textContent = "Наведи на меня курсор!";
+    const todoInput = document.getElementById('todoInput');
+    const addTodoBtn = document.getElementById('addTodoBtn');
+    const todoList = document.getElementById('todoList');
+
+    addTodoBtn.addEventListener('click', () => {
+        const text = todoInput.value;
+        if (text.trim() !== "") {
+            const li = document.createElement('li'); 
+            li.textContent = text;
+            todoList.appendChild(li); 
+            todoInput.value = ""; 
+        }
     });
 
-    const inputField = document.getElementById('inputField');
-    const inputDisplay = document.getElementById('inputDisplay');
+    const square = document.getElementById('square');
+    const plusBtn = document.getElementById('plusBtn');
+    const minusBtn = document.getElementById('minusBtn');
+    
+    let size = 100;
 
-    inputField.addEventListener('focus', () => {
-        inputField.style.borderColor = "purple";
+    plusBtn.addEventListener('click', () => {
+        size += 10;
+        square.style.width = size + 'px';
+        square.style.height = size + 'px';
     });
 
-    inputField.addEventListener('blur', () => {
-        inputField.style.borderColor = "";
-    });
-
-    inputField.addEventListener('input', (event) => {
-        inputDisplay.textContent = `Вы печатаете: ${event.target.value}`;
+    minusBtn.addEventListener('click', () => {
+        if (size > 10) { 
+            size -= 10;
+            square.style.width = size + 'px';
+            square.style.height = size + 'px';
+        }
     });
 });

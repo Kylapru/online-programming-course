@@ -11,7 +11,6 @@
     <script src="scripts/user.js"></script>
     <script src="scripts/text.js"></script>
     <script src="scripts/item.js"></script>
-    <script src="scripts/user actions.js"></script>
 </head>
 
 <body>
@@ -95,30 +94,41 @@
 
 <section class="section">
     <div class="container">
+
         <div class="box">
-            <button id="clickBtn" class="button is-link">Нажми </button>
-            <button id="doubleClickBtn" class="button is-warning">Нажми eще раз</button>
-            <p id="clickMessage" class="mt-2 has-text-weight-bold"></p>
+            <h3 class="title is-4">Задание 1: Счётчик</h3>
+            <button id="counterBtn" class="button is-primary">Нажми меня</button>
+            <p id="counterDisplay">0</p>
         </div>
 
         <div class="box">
-            <div id="hoverBox" class="notification is-info has-text-centered" style="transition: 0.3s; cursor: pointer;">
-                Наведи сюда курсор!
-            </div>
+            <h3 class="title is-4">Задание 2: Приветствие</h3>
+            <input id="nameInput" class="input" type="text" placeholder="Введите имя" style="width: 200px;">
+            <button id="greetBtn" class="button is-info">Привет</button>
+            <p id="greetMessage" class="mt-2"></p>
         </div>
 
         <div class="box">
-            <div class="field">
-                <label class="label">Введите текст:</label>
-                <div class="control">
-                    <input id="inputField" class="input" type="text" placeholder="Пишите что-нибудь...">
-                </div>
-                <p id="inputDisplay" class="help is-info">Ваш текст</p>
-            </div>
+            <h3 class="title is-4">Задание 3: Переключатель темы</h3>
+            <button id="themeBtn" class="button is-dark">Сменить тему</button>
+        </div>
+
+        <div class="box">
+            <h3 class="title is-4">Задание 4: Список дел</h3>
+            <input id="todoInput" class="input" type="text" placeholder="Что нужно сделать?" style="width: 250px;">
+            <button id="addTodoBtn" class="button is-success">Добавить</button>
+            <ul id="todoList" style="list-style-type: disc; margin-left: 20px;" class="mt-3"></ul>
+        </div>
+
+        <div class="box">
+            <h3 class="title is-4">Задание 5: Управление размером</h3>
+            <div id="square" style="width: 100px; height: 100px; background-color: #ff3860; margin-bottom: 10px;"></div>
+            <button id="plusBtn" class="button is-small">+</button>
+            <button id="minusBtn" class="button is-small">-</button>
         </div>
     </div>
 </section>
-
+<script src="scripts/user actions.js"></script>
 </footer>
 
 </body>
