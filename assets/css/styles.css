@@ -59,3 +59,7 @@ footer .content {
 .has-text-centered {
     text-align: center; 
 }
+
+.highlight {
+    background-color: yellow;
+}
